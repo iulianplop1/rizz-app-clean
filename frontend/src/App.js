@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
-import { AppBar, Toolbar, Typography, IconButton, CssBaseline, Box, Tooltip, useTheme, useMediaQuery, CircularProgress, GlobalStyles } from '@mui/material';
+import { AppBar, Toolbar, Typography, IconButton, CssBaseline, Box, Tooltip, useTheme, useMediaQuery, Avatar, CircularProgress, GlobalStyles } from '@mui/material';
 import { 
   Inbox as InboxIcon, People as PeopleIcon, Chat as ChatIcon, 
   BarChart as BarChartIcon, Settings as SettingsIcon, 

@@ -50,11 +50,13 @@ import { useNavigate } from 'react-router-dom';
 const ConversationSimulator = () => {
   const [profiles, setProfiles] = useState([]);
   const [selectedPersonality, setSelectedPersonality] = useState(null);
+  const [customPersonality, setCustomPersonality] = useState(null);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [isSimulating, setIsSimulating] = useState(false);
   const [simulationMode, setSimulationMode] = useState('practice'); // practice, training, advanced
   const [difficulty, setDifficulty] = useState('medium'); // easy, medium, hard
+  const [aiResponse, setAiResponse] = useState('');
   const [loading, setLoading] = useState(false);
   const [personalityDialog, setPersonalityDialog] = useState(false);
   const [customPersonalityDialog, setCustomPersonalityDialog] = useState(false);

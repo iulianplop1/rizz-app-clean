@@ -36,6 +36,8 @@ const BOY_COLOR = '#3B82F6'; // blue
 
 const PhotoAIResponse = () => {
   const [photo, setPhoto] = useState(null);
+  const [uploadSuccess, setUploadSuccess] = useState(false);
+  const [analyzeSuccess, setAnalyzeSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const [aiReplies, setAiReplies] = useState([]);
   const [conversation, setConversation] = useState([]);

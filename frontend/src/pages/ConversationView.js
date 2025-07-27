@@ -56,8 +56,10 @@ const ConversationView = () => {
   const [tonePreference, setTonePreference] = useState('');
   const [customTone, setCustomTone] = useState('');
   const [loading, setLoading] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [currentSearchIndex, setCurrentSearchIndex] = useState(-1);
+  const [showSearchResults, setShowSearchResults] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
   const messagesEndRef = useRef(null);

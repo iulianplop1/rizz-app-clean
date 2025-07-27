@@ -48,6 +48,7 @@ import {
   LocalFireDepartment,
   TrendingFlat,
   PsychologyAlt,
+  MessageOutlined,
   Timeline,
   Insights,
   Analytics as AnalyticsIcon,
@@ -60,6 +61,7 @@ import axios from 'axios';
 
 const Analytics = () => {
   const [profiles, setProfiles] = useState([]);
+  const [analytics, setAnalytics] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
