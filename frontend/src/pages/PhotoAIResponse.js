@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useRef } from 'react';
-import { Box, Typography, Button, Paper, TextField, CircularProgress, Alert, LinearProgress, MenuItem, Select, FormControl, InputLabel, Collapse, IconButton, Snackbar } from '@mui/material';
+import { Box, Typography, Button, TextField, CircularProgress, Alert, LinearProgress, MenuItem, Select, FormControl, InputLabel, Collapse, IconButton, Snackbar } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
@@ -15,11 +15,7 @@ import RefreshIcon from '@mui/icons-material/Refresh';
 import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
 import axios from 'axios';
 
-const MOCK_MESSAGES = [
-  { from: 'Her', text: 'Hey, what are you up to?' },
-  { from: 'Me', text: 'Just chilling, you?' },
-  { from: 'Her', text: 'Same here! Got any plans for the weekend?' },
-];
+
 
 const TONE_OPTIONS = [
   { value: 'flirty', label: 'Flirty' },

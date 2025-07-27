@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, IconButton, CssBaseline, Box, Tooltip, useTheme, useMediaQuery, Avatar, CircularProgress, GlobalStyles } from '@mui/material';
 import { 
   Inbox as InboxIcon, People as PeopleIcon, Chat as ChatIcon, 
@@ -55,7 +55,6 @@ function TopNav() {
             <button
               onClick={() => navigate('/inbox')}
               aria-label="Go to Inbox"
-              role="button"
               style={{
                 background: 'none',
                 border: 'none',
@@ -183,9 +182,7 @@ function MobileBottomNav() {
   );
 }
 
-function Placeholder({ label }) {
-  return <Box sx={{ p: 3 }}><Typography variant="h4">{label} (Coming Soon)</Typography></Box>;
-}
+
 
 function AuthenticatedApp() {
   const isMobile = useMediaQuery('(max-width: 767px)');

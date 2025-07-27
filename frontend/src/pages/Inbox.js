@@ -79,7 +79,7 @@ function Inbox() {
   const [profiles, setProfiles] = useState([]);
   const [userProfile, setUserProfile] = useState(null);
   const [aiThinking, setAiThinking] = useState(false);
-  const [suggestions, setSuggestions] = useState([
+  const [suggestions] = useState([
     'Ask about their weekend',
     'Send a compliment',
     'Share a funny meme',

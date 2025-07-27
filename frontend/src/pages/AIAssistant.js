@@ -6,18 +6,13 @@ import {
   Typography,
   Paper,
   Container,
-  Grid,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
   Chip,
   Divider,
   Alert,
   Snackbar,
   Alert as MuiAlert
 } from '@mui/material';
-import { Send as SendIcon, Person as PersonIcon } from '@mui/icons-material';
+import { Send as SendIcon } from '@mui/icons-material';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 

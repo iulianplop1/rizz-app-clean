@@ -119,6 +119,8 @@ const SignUpForm = ({ onSignUp }) => {
         if (!formData.gender && !skipProfile) newErrors.gender = 'Gender is required';
         break;
       // Steps 2 and 3 are optional
+      default:
+        break;
     }
     
     setErrors(newErrors);

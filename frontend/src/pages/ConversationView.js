@@ -6,7 +6,6 @@ import {
   TextField,
   Button,
   Container,
-  Grid,
   Switch,
   FormControlLabel,
   Chip,
@@ -14,9 +13,6 @@ import {
   IconButton,
   InputAdornment,
   Alert,
-  List,
-  ListItem,
-  ListItemText,
   Snackbar,
   MenuItem,
   Select,
@@ -25,13 +21,8 @@ import {
   Tooltip,
 } from '@mui/material';
 import {
-  Send as SendIcon,
-  Search as SearchIcon,
-  NavigateNext as NextIcon,
-  NavigateBefore as PrevIcon,
   AutoAwesome as AutoAwesomeIcon,
-  Edit as EditIcon,
-  Flag as FlagIcon
+  Edit as EditIcon
 } from '@mui/icons-material';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -78,7 +69,6 @@ const ConversationView = () => {
   const controlsRef = useRef(null);
   const [showScrollHint, setShowScrollHint] = useState(false);
   const theme = useTheme();
-  const isDark = theme.palette.mode === 'dark' || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
   const [geminiApiKey, setGeminiApiKey] = useState('');
   const [showApiKeyError, setShowApiKeyError] = useState(false);
   const navigate = useNavigate();
@@ -188,37 +178,7 @@ const ConversationView = () => {
     setShowSearchResults(results.length > 0);
   };
 
-  const navigateSearch = (direction) => {
-    if (searchResults.length === 0) return;
-    
-    let newIndex;
-    if (direction === 'next') {
-      newIndex = currentSearchIndex + 1;
-      if (newIndex >= searchResults.length) newIndex = 0; // Wrap around
-    } else {
-      newIndex = currentSearchIndex - 1;
-      if (newIndex < 0) newIndex = searchResults.length - 1; // Wrap around
-    }
-    
-    setCurrentSearchIndex(newIndex);
-    
-    // Scroll to the found message
-    const messageElement = document.getElementById(`message-${searchResults[newIndex].index}`);
-    if (messageElement) {
-      messageElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      messageElement.style.backgroundColor = '#fff3cd';
-      setTimeout(() => {
-        messageElement.style.backgroundColor = 'transparent';
-      }, 2000);
-    }
-  };
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSearch();
-    }
-  };
 
   const handlePolish = async () => {
     if (!input.trim() || !profile) return;
