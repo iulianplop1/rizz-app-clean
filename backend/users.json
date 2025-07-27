@@ -1,0 +1,14 @@
+{
+  "iulian_plop": {
+    "password": "Iulian2006.",
+    "email": "iulian@example.com",
+    "created_at": "2024-01-01T00:00:00Z",
+    "is_admin": true
+  },
+  "mircel": {
+    "password": "111111",
+    "email": "iulicplop@gmail.com",
+    "created_at": "2025-07-26T14:45:49.049414",
+    "is_admin": false
+  }
+}

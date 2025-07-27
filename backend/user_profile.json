@@ -1,0 +1,21 @@
+{
+  "name": "mirc",
+  "gender": "male",
+  "age": 31,
+  "bio": "lol",
+  "interests": [
+    "travel"
+  ],
+  "personality": [
+    "Romantic",
+    "Caring"
+  ],
+  "goals": [
+    "Have fun conversations"
+  ],
+  "preferences": {
+    "defaultTone": "friendly",
+    "enableNotifications": true,
+    "autoGenerate": false
+  }
+}

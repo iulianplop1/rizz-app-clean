@@ -1,0 +1,17 @@
+{
+  "apiKeys": {
+    "geminiApiKey": "",
+    "instagramBusinessId": "",
+    "telegramBotToken": "",
+    "telegramChatId": ""
+  },
+  "preferences": {
+    "autoExtractPreferences": true,
+    "autoGenerateReplies": false,
+    "sendTelegramNotifications": true,
+    "enableWebhook": true,
+    "maxMessagesPerProfile": 50,
+    "aiTemperature": 0.7,
+    "defaultTone": "flirty"
+  }
+} 

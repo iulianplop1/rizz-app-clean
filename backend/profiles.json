@@ -1,0 +1,1479 @@
+{
+  "1367480801045644": {
+    "age": "18",
+    "bio": "cute",
+    "conversation_goals": [
+      "keep the conversation going"
+    ],
+    "details": {
+      "favorite_drink": "Fanta",
+      "pet_name": "Max (dog)"
+    },
+    "gender": "female",
+    "inside_jokes": [
+      "less messy than the last one (adventure)",
+      "sushi incident at that tiny place on Main Street"
+    ],
+    "likes": [
+      "watching movies",
+      "the recipient (finds them cute)",
+      "icecream",
+      "sushi",
+      "fishing",
+      "The Notebook (movie)",
+      "walking",
+      "fanta",
+      "adventures",
+      "cats",
+      "pandas",
+      "Fanta",
+      "dogs",
+      "going for walks",
+      "crabs"
+    ],
+    "memory_vector_ids": [],
+    "name": "jesica",
+    "personality_tags": [
+      "nostalgic",
+      "agreeable",
+      "polite",
+      "Relaxed",
+      "Active",
+      "humorous",
+      "active",
+      "easy-going",
+      "affectionate",
+      "relaxed",
+      "appreciative",
+      "positive",
+      "outdoorsy",
+      "friendly",
+      "curious",
+      "confident",
+      "optimistic",
+      "proud",
+      "direct",
+      "adventurous",
+      "apologetic",
+      "inquisitive",
+      "animal lover",
+      "informal",
+      "expressive",
+      "conversational"
+    ],
+    "previous_messages": [
+      {
+        "from": "Me",
+        "text": "I am doing fine what about you",
+        "timestamp": "2025-07-18 08:39"
+      },
+      {
+        "from": "1367480801045644",
+        "text": "I am doing alright just about watch a movie",
+        "timestamp": "2025-07-18 08:43"
+      },
+      {
+        "from": "Me",
+        "text": "Oh that's nice what movie",
+        "timestamp": "2025-07-18 08:43"
+      },
+      {
+        "from": "1367480801045644",
+        "text": "The jurassic word",
+        "timestamp": "2025-07-18 08:45"
+      },
+      {
+        "from": "1367480801045644",
+        "text": "The jurassic word",
+        "timestamp": "2025-07-18 08:45"
+      },
+      {
+        "from": "1367480801045644",
+        "text": "I really like dogs",
+        "timestamp": "2025-07-18 08:53"
+      },
+      {
+        "from": "1367480801045644",
+        "text": "I love dogs and icecream and pandas",
+        "timestamp": "2025-07-18 09:10"
+      },
+      {
+        "from": "1367480801045644",
+        "text": "I love dogs and icecream and pandas",
+        "timestamp": "2025-07-18 09:13"
+      },
+      {
+        "from": "1367480801045644",
+        "text": "I love dogs and icecream and pandas 🐼",
+        "timestamp": "2025-07-18 09:14"
+      },
+      {
+        "from": "Me",
+        "text": "I love dogs and icecream and pandas 🐼",
+        "timestamp": "2025-07-18 09:15"
+      },
+      {
+        "from": "Me",
+        "text": "I love dogs and icecream and pandas 🐼",
+        "timestamp": "2025-07-18 09:17"
+      },
+      {
+        "from": "Me",
+        "text": "I love dogs and icecream and pandas 🐼",
+        "timestamp": "2025-07-18 09:17"
+      },
+      {
+        "from": "Me",
+        "text": "I love dogs and icecream and pandas 🐼",
+        "timestamp": "2025-07-18 09:17"
+      },
+      {
+        "from": "Me",
+        "text": "I love dogs and icecream and pandas 🐼",
+        "timestamp": "2025-07-18 09:17"
+      },
+      {
+        "from": "Me",
+        "text": "I love dogs and icecream and pandas 🐼",
+        "timestamp": "2025-07-18 09:17"
+      },
+      {
+        "from": "Me",
+        "text": "I love dogs and icecream and pandas 🐼",
+        "timestamp": "2025-07-18 09:17"
+      },
+      {
+        "from": "Me",
+        "text": "I love dogs and icecream and pandas 🐼",
+        "timestamp": "2025-07-18 09:17"
+      },
+      {
+        "from": "Me",
+        "text": "I love dogs and icecream and pandas 🐼",
+        "timestamp": "2025-07-18 09:17"
+      },
+      {
+        "from": "Me",
+        "text": "I love dogs and icecream and pandas 🐼",
+        "timestamp": "2025-07-18 09:18"
+      },
+      {
+        "from": "Me",
+        "text": "I love dogs and icecream and pandas 🐼",
+        "timestamp": "2025-07-18 09:17"
+      },
+      {
+        "from": "1367480801045644",
+        "text": "I love crabs too",
+        "timestamp": "2025-07-18 09:19"
+      },
+      {
+        "from": "1367480801045644",
+        "text": "I like to watch movies and go for a walk",
+        "timestamp": "2025-07-18 09:22"
+      },
+      {
+        "from": "1367480801045644",
+        "text": "I like to watch movies and go for a walk",
+        "timestamp": "2025-07-18 09:25"
+      },
+      {
+        "from": "Me",
+        "text": "hey ",
+        "timestamp": "2025-07-18T22:24:19.565Z"
+      },
+      {
+        "from": "jesica",
+        "text": "Hey there",
+        "timestamp": "2025-07-18 15:23"
+      },
+      {
+        "from": "jesica",
+        "text": "Hiii",
+        "timestamp": "2025-07-18 15:27"
+      },
+      {
+        "from": "jesica",
+        "text": "Hi",
+        "timestamp": "2025-07-18 15:31"
+      },
+      {
+        "from": "Me",
+        "text": "Hey",
+        "timestamp": "2025-07-18 15:32"
+      },
+      {
+        "from": "jesica",
+        "text": "",
+        "timestamp": "2025-07-18 15:32"
+      },
+      {
+        "from": "jesica",
+        "text": "Hei cutie",
+        "timestamp": "2025-07-18 15:38"
+      },
+      {
+        "from": "jesica",
+        "text": "What's your name",
+        "timestamp": "2025-07-18 15:41"
+      },
+      {
+        "from": "jesica",
+        "text": "I like fishing",
+        "timestamp": "2025-07-18 16:00"
+      },
+      {
+        "from": "jesica",
+        "text": "“You know, every time I see sushi now I think of our ‘sushi incident’ at that tiny place on Main Street 😂. By the way, my dog Max finally learned to fetch my slippers—he’s such a smart boy! Oh, and did I ever tell you my favorite movie is The Notebook? Classic, I know. Can’t wait for our next adventure (hopefully less messy than the last one!)",
+        "timestamp": "2025-07-18 16:04"
+      },
+      {
+        "from": "jesica",
+        "text": "Hey man sorry",
+        "timestamp": "2025-07-18 17:21"
+      },
+      {
+        "from": "jesica",
+        "text": "I think you are really cute",
+        "timestamp": "2025-07-18 17:24"
+      },
+      {
+        "from": "Me",
+        "text": "I really like cats.",
+        "timestamp": "2025-07-18 18:30"
+      },
+      {
+        "from": "Me",
+        "text": "I really like cats",
+        "timestamp": "2025-07-18 18:34"
+      },
+      {
+        "from": "Me",
+        "text": "I love cats and my favorite drink is fanta",
+        "timestamp": "2025-07-18 18:37"
+      },
+      {
+        "from": "Me",
+        "text": "I love cats and my favorite drink is fanta",
+        "timestamp": "2025-07-18 18:39"
+      },
+      {
+        "from": "Me",
+        "text": "I love cats and my favorite drink is fanta",
+        "timestamp": "2025-07-18 18:40"
+      },
+      {
+        "from": "Me",
+        "text": "I love cats and my favorite drink is fanta",
+        "timestamp": "2025-07-18 18:42"
+      },
+      {
+        "from": "Me",
+        "text": "I love cats and my favorite drink is fanta",
+        "timestamp": "2025-07-18 18:44"
+      },
+      {
+        "from": "Me",
+        "text": "I love cats and my favorite drink is fanta",
+        "timestamp": "2025-07-18 18:45"
+      },
+      {
+        "from": "jesica",
+        "text": "I love cats and my favorite drink is fanta",
+        "timestamp": "2025-07-18 18:46"
+      },
+      {
+        "from": "Me",
+        "text": "I love cats and my favorite drink is fanta",
+        "timestamp": "2025-07-18 18:49"
+      },
+      {
+        "from": "Me",
+        "text": "keep the conversation going",
+        "timestamp": "7/18/2025, 7:21:59 PM"
+      },
+      {
+        "from": "jesica",
+        "text": "How do you know what you are doing",
+        "timestamp": "2025-07-18 19:23"
+      },
+      {
+        "from": "jesica",
+        "text": "How are you doing",
+        "timestamp": "2025-07-20 13:30"
+      },
+      {
+        "from": "jesica",
+        "text": "Hey",
+        "timestamp": "2025-07-21 05:22"
+      },
+      {
+        "from": "Me",
+        "text": "Hey",
+        "timestamp": "2025-07-21 17:29"
+      }
+    ],
+    "tone_preference": "match her tone",
+    "user_id": "1367480801045644",
+    "username": "1367480801045644"
+  },
+  "517060774682889": {
+    "conversation_goals": [
+      "keep the conversaton going"
+    ],
+    "details": {
+      "Language": "Romanian",
+      "action": "declining something",
+      "activity": "involved in creating/project work",
+      "aware_of_others_temper": true,
+      "communication_style": "Informal",
+      "context": "The sender is discussing an issue related to software or an application, expressing frustration or annoyance about something that was created or appeared when the application was run.",
+      "current_activity": "eating",
+      "current_situation": "unchanged",
+      "current_state": "Has recently eaten a significant amount and is likely full.",
+      "expects_trust": true,
+      "field_of_interest": "Data science, Machine Learning, or Natural Language Processing",
+      "is_aware_of_a_female_who_sleeps_a_lot": true,
+      "known_entity": "Ori",
+      "known_person_recipient": "Mahu",
+      "language": "Romanian",
+      "language_context": "The use of 'Opa' suggests familiarity with cultures where this interjection is common (e.g., Greek, Portuguese, Slavic, Turkish) for expressing enthusiasm, surprise, or as an informal greeting.",
+      "language_spoken": "Romanian",
+      "language_used": "Romanian",
+      "languages_used": [
+        "Italian (informal)",
+        "Romanian",
+        "English"
+      ],
+      "recent_action": "cooked",
+      "recipient_nickname_or_term": "amud",
+      "refers_to_a_female_individual": true,
+      "residence_details": "has a place suitable for hosting multiple guests overnight",
+      "self_designation": "king",
+      "sender_name": "texS",
+      "speech_style": "colloquial/regional (uses 'Amu' instead of 'Acum')",
+      "linguistic_style": "colloquial",
+      "recent_discovery": "The sender recently learned about an unspecified group or topic referred to as 'ei' (them).",
+      "sender_language": "Romanian"
+    },
+    "inside_jokes": [
+      "vapse",
+      "cezar",
+      "Haros (possibly a unique greeting or reference)",
+      "penguinh (used as a specific reference or nickname for the recipient)",
+      "amud",
+      "la o bucata de noapte",
+      "Deam maine",
+      "Smash (likely a shared reference or specific meaning between sender and receiver, context unknown)",
+      "uitete la red flagul tau",
+      "Da rizz app",
+      "sender referring to themselves as 'king'",
+      "prosta geniu",
+      "Ori spune asa",
+      "Twins"
+    ],
+    "likes": [
+      "Walking",
+      "challenges",
+      "Summer",
+      "Humor",
+      "Technology/Apps",
+      "Dawn/Early mornings",
+      "mobile games",
+      "Internet culture",
+      "Donuts",
+      "rhythm games"
+    ],
+    "memory_vector_ids": [],
+    "name": "Cezar",
+    "personality_tags": [
+      "welcoming",
+      "self-deprecating",
+      "Appreciates nature",
+      "observant",
+      "ironic",
+      "curious",
+      "blunt",
+      "Humorous",
+      "Crude",
+      "critical",
+      "cautious",
+      "teasing",
+      "helpful",
+      "apologetic",
+      "Inquisitive",
+      "Active",
+      "uses controversial language",
+      "Observational",
+      "Pragmatic",
+      "Observant",
+      "Appreciates quiet",
+      "playful",
+      "modern",
+      "responsive",
+      "willing to assist",
+      "proactive",
+      "Engaging",
+      "frustrated",
+      "trusting",
+      "generous",
+      "resigned",
+      "concise",
+      "disappointed",
+      "Familiar",
+      "Opinionated",
+      "Early riser",
+      "expressive",
+      "Calm",
+      "self-aware",
+      "Playful",
+      "Capable",
+      "Trend-aware",
+      "direct",
+      "Practical",
+      "Technical-minded",
+      "relieved",
+      "humorous",
+      "Assertive",
+      "Direct",
+      "pragmatic",
+      "Curious",
+      "enthusiastic",
+      "positive",
+      "gamer",
+      "Casual",
+      "Unbothered",
+      "sad",
+      "hospitable",
+      "casual gamer",
+      "Potentially immature",
+      "Informal",
+      "Polite",
+      "accomplished",
+      "informal",
+      "Confident",
+      "uses slang",
+      "Expressive",
+      "Uses informal language",
+      "Authoritative",
+      "casual",
+      "Concise",
+      "polite",
+      "reactive",
+      "Unique",
+      "social",
+      "confident (in their creation)",
+      "Courteous",
+      "interested",
+      "Vulgar",
+      "Open-minded",
+      "Interactive",
+      "Multilingual",
+      "supportive"
+    ],
+    "previous_messages": [
+      {
+        "from": "Cezar",
+        "text": "Goated",
+        "timestamp": "2025-07-20 17:01"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 04:38"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 04:38"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 11:46"
+      },
+      {
+        "from": "Cezar",
+        "text": "Exact",
+        "timestamp": "2025-07-21 11:46"
+      },
+      {
+        "from": "Cezar",
+        "text": "Fuck Young Indians",
+        "timestamp": "2025-07-21 11:46"
+      },
+      {
+        "from": "Me",
+        "text": "Damm right",
+        "timestamp": "2025-07-21 11:46"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 11:46"
+      },
+      {
+        "from": "Me",
+        "text": "",
+        "timestamp": "2025-07-21 11:46"
+      },
+      {
+        "from": "Me",
+        "text": "Landing pista",
+        "timestamp": "2025-07-21 11:47"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 11:50"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 11:50"
+      },
+      {
+        "from": "Cezar",
+        "text": "Sarmanu pinguin",
+        "timestamp": "2025-07-21 11:50"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 13:55"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 14:05"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 14:07"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 14:10"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 15:06"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 17:44"
+      },
+      {
+        "from": "Me",
+        "text": "Tu ești penguinh",
+        "timestamp": "2025-07-21 17:45"
+      },
+      {
+        "from": "Me",
+        "text": "Smash",
+        "timestamp": "2025-07-21 17:45"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 17:49"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 17:49"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-21 17:49"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-22 13:17"
+      },
+      {
+        "from": "Cezar",
+        "text": "Nihuia",
+        "timestamp": "2025-07-22 13:18"
+      },
+      {
+        "from": "Cezar",
+        "text": "Totul achitat pt tine",
+        "timestamp": "2025-07-23 11:42"
+      },
+      {
+        "from": "Cezar",
+        "text": "Securitate si rezilienta digitala",
+        "timestamp": "2025-07-23 11:42"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-23 11:51"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-23 11:51"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-23 11:51"
+      },
+      {
+        "from": "Cezar",
+        "text": "Da",
+        "timestamp": "2025-07-23 11:51"
+      },
+      {
+        "from": "Cezar",
+        "text": "Dute bai",
+        "timestamp": "2025-07-23 11:51"
+      },
+      {
+        "from": "Cezar",
+        "text": "Hater",
+        "timestamp": "2025-07-23 11:51"
+      },
+      {
+        "from": "Cezar",
+        "text": "Poti sa te duci 3 zile sa vezi ceva nou, totul achitat pt tine",
+        "timestamp": "2025-07-23 11:52"
+      },
+      {
+        "from": "Cezar",
+        "text": "Da daca vrei sa stai acasa facand gooning toata ziua treaba ta",
+        "timestamp": "2025-07-23 11:52"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-23 11:52"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-23 11:52"
+      },
+      {
+        "from": "Cezar",
+        "text": "Da",
+        "timestamp": "2025-07-23 11:52"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-23 11:53"
+      },
+      {
+        "from": "Cezar",
+        "text": "Eu tiam aratat ca mie mio placut si mam gandit poate si tu vrei",
+        "timestamp": "2025-07-23 11:53"
+      },
+      {
+        "from": "Cezar",
+        "text": "Daca nu vrei, dute nahui dar",
+        "timestamp": "2025-07-23 11:53"
+      },
+      {
+        "from": "Cezar",
+        "text": "Jk, nu te du nahui",
+        "timestamp": "2025-07-23 11:53"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-23 11:53"
+      },
+      {
+        "from": "Cezar",
+        "text": "Treaba ta",
+        "timestamp": "2025-07-23 11:53"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-23 11:54"
+      },
+      {
+        "from": "Cezar",
+        "text": "Da bilet si ma duc",
+        "timestamp": "2025-07-23 11:54"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-23 11:55"
+      },
+      {
+        "from": "Cezar",
+        "text": "Ap iaca",
+        "timestamp": "2025-07-23 11:55"
+      },
+      {
+        "from": "Cezar",
+        "text": "",
+        "timestamp": "2025-07-25 16:23"
+      }
+    ],
+    "tone_preference": "match his tone",
+    "user_id": "517060774682889",
+    "username": "517060774682889"
+  },
+  "1108293564331597": {
+    "conversation_goals": [],
+    "details": {},
+    "inside_jokes": [],
+    "likes": [],
+    "memory_vector_ids": [],
+    "name": "Amber",
+    "personality_tags": [],
+    "previous_messages": [
+      {
+        "from": "1108293564331597",
+        "text": "",
+        "timestamp": "2025-07-18 09:30"
+      },
+      {
+        "from": "Amber",
+        "text": "",
+        "timestamp": "2025-07-21 12:08"
+      },
+      {
+        "from": "Amber",
+        "text": "",
+        "timestamp": "2025-07-21 12:12"
+      },
+      {
+        "from": "Amber",
+        "text": "",
+        "timestamp": "2025-07-21 14:58"
+      }
+    ],
+    "tone_preference": "flirty",
+    "user_id": "1108293564331597",
+    "username": "1108293564331597"
+  },
+  "52b19674-cd53-4472-9960-4aa7c67585e2": {
+    "user_id": "52b19674-cd53-4472-9960-4aa7c67585e2",
+    "name": "Sample conversation",
+    "likes": [
+      "Learning new things",
+      "Psychology",
+      "Human behavior",
+      "Relationships",
+      "Reading",
+      "Hiking",
+      "Photography (especially nature and sunsets)",
+      "Nature (peace, inspiration)",
+      "Cooking (especially Italian food: pasta, pizza)",
+      "Creating things from scratch",
+      "Beautiful moments",
+      "Simple pleasures"
+    ],
+    "personality_tags": [
+      "Curious",
+      "Empathetic",
+      "Creative",
+      "Analytical",
+      "Introspective",
+      "Passionate",
+      "Enthusiastic",
+      "Nature-loving",
+      "Appreciative",
+      "Positive",
+      "Mindful",
+      "Joyful",
+      "Insightful",
+      "Hands-on",
+      "Thoughtful",
+      "Observant",
+      "Calm"
+    ],
+    "inside_jokes": [],
+    "details": {
+      "favorite_cuisine": "Italian (pasta, pizza)",
+      "favorite_place": "A beautiful hiking trail near their house"
+    },
+    "conversation_goals": [
+      "To share personal interests and passions",
+      "To connect with others",
+      "To express enthusiasm for their hobbies",
+      "To introduce themselves and their interests"
+    ],
+    "previous_messages": [
+      {
+        "from": "Sarah",
+        "text": "Hey! How are you doing today? 😊",
+        "timestamp": "2024-01-15 10:30"
+      },
+      {
+        "from": "Me",
+        "text": "I'm good! Just working on some coding projects. How about you?",
+        "timestamp": "2024-01-15 10:32"
+      },
+      {
+        "from": "Sarah",
+        "text": "That sounds interesting! I love learning new things. I'm actually reading this amazing book about psychology right now",
+        "timestamp": "2024-01-15 10:35"
+      },
+      {
+        "from": "Me",
+        "text": "Psychology is fascinating! What's the book about?",
+        "timestamp": "2024-01-15 10:37"
+      },
+      {
+        "from": "Sarah",
+        "text": "It's about human behavior and relationships. I'm really into understanding how people think and feel. I also love hiking and photography when I'm not reading!",
+        "timestamp": "2024-01-15 10:40"
+      },
+      {
+        "from": "Me",
+        "text": "That's awesome! Hiking and photography sound like great hobbies. Do you have a favorite hiking spot?",
+        "timestamp": "2024-01-15 10:42"
+      },
+      {
+        "from": "Sarah",
+        "text": "Yes! There's this beautiful trail near my house with amazing views. I love taking photos there, especially during sunset. Nature is just so peaceful and inspiring",
+        "timestamp": "2024-01-15 10:45"
+      },
+      {
+        "from": "Me",
+        "text": "That sounds absolutely beautiful! I'd love to see some of your photos sometime",
+        "timestamp": "2024-01-15 10:47"
+      },
+      {
+        "from": "Sarah",
+        "text": "I'd love to share them with you! Photography is my passion. I also really enjoy cooking - there's something therapeutic about creating something delicious from scratch",
+        "timestamp": "2024-01-15 10:50"
+      },
+      {
+        "from": "Me",
+        "text": "Cooking is definitely an art! What's your favorite thing to cook?",
+        "timestamp": "2024-01-15 10:52"
+      },
+      {
+        "from": "Sarah",
+        "text": "I love making Italian food! Pasta, pizza, you name it. There's just something about the flavors and the process that makes me happy. Plus, I get to be creative with ingredients",
+        "timestamp": "2024-01-15 10:55"
+      },
+      {
+        "from": "Me",
+        "text": "Italian food is amazing! You sound like someone who really appreciates the little things in life",
+        "timestamp": "2024-01-15 10:57"
+      },
+      {
+        "from": "Sarah",
+        "text": "Absolutely! Life is too short not to enjoy the beautiful moments. Whether it's a good book, a beautiful sunset, or a delicious meal - these are the things that make life special",
+        "timestamp": "2024-01-15 11:00"
+      }
+    ],
+    "memory_vector_ids": [],
+    "bio": "A deeply curious and empathetic individual, passionate about understanding human behavior and finding beauty in the world. They enjoy intellectual pursuits like reading psychology books, balanced with active and creative hobbies such as hiking, nature photography, and cooking delicious Italian meals from scratch. They are enthusiastic, appreciative of life's simple pleasures, and find joy in sharing their passions and connecting over meaningful experiences."
+  },
+  "1703747763659806": {
+    "conversation_goals": [
+      "keep the conversation going "
+    ],
+    "details": {
+      "age": 18,
+      "aware_of_person": "@loveislyss",
+      "beliefs_about_recipients": "believes the recipients are Latina",
+      "close_to_recipient": true,
+      "current_feeling": "sad",
+      "current_interest": "meeting new people / expanding social circle",
+      "current_sequence_day": 133,
+      "employment_status": "unemployed",
+      "expects_recipient_to_speak_spanish": true,
+      "familiar_with_internet_culture": true,
+      "height": "7ft",
+      "is_interested_in_spanish": true,
+      "is_tracking_a_sequence": true,
+      "known_handle": "loveislyss",
+      "language": "Spanish",
+      "language_familiarity": "Spanish",
+      "language_proficiency": {
+        "spanish": {
+          "understanding": "proficient",
+          "writing": "finds difficult"
+        }
+      },
+      "language_spoken": "Spanish",
+      "language_usage": "Spanish (partial)",
+      "languages_spoken": [
+        "Spanish"
+      ],
+      "potential_language_familiarity": [
+        "Romanian",
+        "Dutch"
+      ],
+      "previous_interaction_goal": "to provoke a strong emotional reaction (raging) from the recipient",
+      "qualification": "Spanish language certification",
+      "seeking_skill": "classification",
+      "uses_internet_slang": true
+    },
+    "inside_jokes": [
+      "that one",
+      "no cap",
+      "discussion about height",
+      "height 'with a cap on' qualifier",
+      "steal a brain rot",
+      "Day 133",
+      "References a mutually understood, unstated prior topic/sentiment",
+      "Friends (TV show)",
+      "LYSS",
+      "The specific 'cap' or exaggeration being referred to",
+      "raging",
+      "'18' (possible inside joke or shared reference)",
+      "sender claiming fantastical abilities"
+    ],
+    "likes": [
+      "playful conflict",
+      "provoking reactions",
+      "teasing",
+      "Latinas (as a preferred demographic/type of person)",
+      "Roblox",
+      "Spanish language",
+      "Latinas"
+    ],
+    "memory_vector_ids": [],
+    "name": "Lyss",
+    "personality_tags": [
+      "Curious",
+      "proficient",
+      "reactive",
+      "mischievous",
+      "Reserved",
+      "Self-aware",
+      "Expresses clear preferences",
+      "casual",
+      "flirtatious",
+      "Devoted",
+      "Inquisitive",
+      "Self-conscious",
+      "critical thinker",
+      "friendly",
+      "straightforward",
+      "Playful",
+      "curious",
+      "Nervous",
+      "Honest",
+      "honest",
+      "Desirous of interaction",
+      "Demanding",
+      "Observant",
+      "informal",
+      "provocative",
+      "observant",
+      "Help-seeking",
+      "Awkward",
+      "Speaks imperfect Spanish",
+      "Indifferent",
+      "surprised",
+      "Attentive",
+      "Direct",
+      "reserved",
+      "Noncommittal",
+      "Casual",
+      "appreciative",
+      "Interested in recipient's personal life",
+      "confident",
+      "humorous",
+      "disappointed",
+      "Realistic",
+      "Gamer",
+      "online-savvy",
+      "teasing",
+      "Task-oriented",
+      "inquisitive",
+      "Socially inclined",
+      "even-tempered",
+      "contemplative",
+      "exclusive",
+      "kind",
+      "sad",
+      "imaginative",
+      "encouraging",
+      "Resourceful",
+      "Agreeable",
+      "understanding",
+      "Affectionate",
+      "Responsive",
+      "Unconcerned",
+      "Laconic",
+      "Enthusiastic",
+      "calm",
+      "has specific romantic/sexual preferences",
+      "Embarrassed",
+      "concise",
+      "Assumptive",
+      "Flexible",
+      "vulnerable",
+      "Concise",
+      "supportive",
+      "skeptical",
+      "competent",
+      "playful",
+      "selective",
+      "direct",
+      "positive",
+      "Caring",
+      "sincere",
+      "Skeptical",
+      "Humorous",
+      "unenthusiastic",
+      "Confident",
+      "expressive",
+      "empathetic"
+    ],
+    "previous_messages": [
+      {
+        "from": "Me",
+        "text": "Ai mamasita",
+        "timestamp": "2025-07-19 14:50"
+      },
+      {
+        "from": "Lyss",
+        "text": "LMAO",
+        "timestamp": "2025-07-19 14:50"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-19 14:50"
+      },
+      {
+        "from": "Lyss",
+        "text": "jajajaja",
+        "timestamp": "2025-07-19 14:50"
+      },
+      {
+        "from": "Me",
+        "text": "That's what I am talking about",
+        "timestamp": "2025-07-19 14:50"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-19 14:51"
+      },
+      {
+        "from": "Me",
+        "text": "Cause j in spanish its h",
+        "timestamp": "2025-07-19 14:51"
+      },
+      {
+        "from": "Lyss",
+        "text": "cuántos años tiene?",
+        "timestamp": "2025-07-19 14:51"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-19 14:51"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-19 14:51"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-19 14:51"
+      },
+      {
+        "from": "Me",
+        "text": "Y tu?",
+        "timestamp": "2025-07-19 14:51"
+      },
+      {
+        "from": "Lyss",
+        "text": "18",
+        "timestamp": "2025-07-19 14:51"
+      },
+      {
+        "from": "Me",
+        "text": "Perfecte",
+        "timestamp": "2025-07-19 14:51"
+      },
+      {
+        "from": "Me",
+        "text": "See I told you I am serios",
+        "timestamp": "2025-07-19 14:51"
+      },
+      {
+        "from": "Me",
+        "text": "About latinas",
+        "timestamp": "2025-07-19 14:51"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-19 14:51"
+      },
+      {
+        "from": "Lyss",
+        "text": "tienes un trabajo..?",
+        "timestamp": "2025-07-19 14:52"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-19 14:52"
+      },
+      {
+        "from": "Me",
+        "text": "No yo soy unemployed 😔",
+        "timestamp": "2025-07-19 14:52"
+      },
+      {
+        "from": "Lyss",
+        "text": "juegas Roblox steal a brain rot??",
+        "timestamp": "2025-07-19 14:52"
+      },
+      {
+        "from": "Me",
+        "text": "Lol I do play roblox but that one didn't try yet",
+        "timestamp": "2025-07-19 14:53"
+      },
+      {
+        "from": "Me",
+        "text": "Also I do understand Spanish but it's harder to write it",
+        "timestamp": "2025-07-19 14:53"
+      },
+      {
+        "from": "Lyss",
+        "text": "it’s ok at least you tried",
+        "timestamp": "2025-07-19 14:53"
+      },
+      {
+        "from": "Me",
+        "text": "You're too sweet",
+        "timestamp": "2025-07-19 14:54"
+      },
+      {
+        "from": "Me",
+        "text": "My efforts are usually reserved only for latinas",
+        "timestamp": "2025-07-19 14:54"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-19 14:56"
+      },
+      {
+        "from": "Lyss",
+        "text": "how tall are you",
+        "timestamp": "2025-07-19 14:57"
+      },
+      {
+        "from": "Me",
+        "text": "I am 6 foot 5 with a cap on",
+        "timestamp": "2025-07-19 14:58"
+      },
+      {
+        "from": "Me",
+        "text": "And 6 feet with no cap",
+        "timestamp": "2025-07-19 14:59"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-19 14:59"
+      },
+      {
+        "from": "Lyss",
+        "text": "how big that cap holy",
+        "timestamp": "2025-07-19 14:59"
+      },
+      {
+        "from": "Me",
+        "text": "I know right",
+        "timestamp": "2025-07-19 15:00"
+      },
+      {
+        "from": "Me",
+        "text": "So how tall are you",
+        "timestamp": "2025-07-19 15:01"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-19 15:04"
+      },
+      {
+        "from": "Lyss",
+        "text": "doesn’t matter",
+        "timestamp": "2025-07-19 15:04"
+      },
+      {
+        "from": "Me",
+        "text": "Everything about you matters to me",
+        "timestamp": "2025-07-19 15:05"
+      },
+      {
+        "from": "Me",
+        "text": "So I am just wondering",
+        "timestamp": "2025-07-19 15:06"
+      },
+      {
+        "from": "Me",
+        "text": "What are you hiding?",
+        "timestamp": "2025-07-19 15:06"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-19 15:06"
+      },
+      {
+        "from": "Lyss",
+        "text": "i’m 7ft",
+        "timestamp": "2025-07-19 15:06"
+      },
+      {
+        "from": "Me",
+        "text": "Oh wow",
+        "timestamp": "2025-07-19 15:07"
+      },
+      {
+        "from": "Me",
+        "text": "Thats tall",
+        "timestamp": "2025-07-19 15:07"
+      },
+      {
+        "from": "Me",
+        "text": "But i could make you taller",
+        "timestamp": "2025-07-19 15:07"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-19 15:15"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-20 13:45"
+      },
+      {
+        "from": "Me",
+        "text": "No tu no  jugar Roblox conmigo.",
+        "timestamp": "2025-07-20 14:16"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-20 14:18"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-20 14:18"
+      },
+      {
+        "from": "Lyss",
+        "text": "",
+        "timestamp": "2025-07-21 11:49"
+      }
+    ],
+    "tone_preference": "match her tone",
+    "user_id": "1703747763659806"
+  },
+  "1100305928086579": {
+    "conversation_goals": [],
+    "details": {},
+    "inside_jokes": [],
+    "likes": [],
+    "memory_vector_ids": [],
+    "name": "Kristi",
+    "personality_tags": [],
+    "previous_messages": [
+      {
+        "from": "@1100305928086579",
+        "text": "Daca cevw saptamina ceea",
+        "timestamp": "2025-07-20 01:02"
+      },
+      {
+        "from": "Me",
+        "text": "Okok",
+        "timestamp": "2025-07-20 02:40"
+      },
+      {
+        "from": "@1100305928086579",
+        "text": "",
+        "timestamp": "2025-07-20 03:56"
+      },
+      {
+        "from": "@1100305928086579",
+        "text": "",
+        "timestamp": "2025-07-20 03:56"
+      },
+      {
+        "from": "Kristi",
+        "text": "Eu am platit",
+        "timestamp": "2025-07-22 05:03"
+      },
+      {
+        "from": "Kristi",
+        "text": "Tat ok",
+        "timestamp": "2025-07-22 06:01"
+      },
+      {
+        "from": "Kristi",
+        "text": "Gata am dat",
+        "timestamp": "2025-07-22 06:01"
+      },
+      {
+        "from": "Me",
+        "text": "E bine dar , amu așteptăm",
+        "timestamp": "2025-07-22 06:08"
+      }
+    ],
+    "user_id": "1100305928086579"
+  },
+  "3218337991664028": {
+    "user_id": "3218337991664028",
+    "name": "@3218337991664028",
+    "likes": [],
+    "personality_tags": [],
+    "inside_jokes": [],
+    "details": {},
+    "conversation_goals": [],
+    "previous_messages": [
+      {
+        "from": "@3218337991664028",
+        "text": "Hey there,\n\nThanks for checking out my content!  If you’re looking for the ultimate AI prompts, AI agents, and AI business check out my digital store: https://dm.stan.store/NvJNsa?m=18032201234479362\n\nHere is the viral AI consultant prompt, enjoy:\nhttps://ext-link.com/uCaanQ",
+        "timestamp": "2025-07-20 14:22"
+      }
+    ],
+    "memory_vector_ids": []
+  },
+  "910542331204420": {
+    "conversation_goals": [],
+    "details": {},
+    "inside_jokes": [],
+    "likes": [],
+    "memory_vector_ids": [],
+    "name": "@John",
+    "personality_tags": [
+      "responsive",
+      "observant",
+      "agreeable",
+      "lighthearted"
+    ],
+    "previous_messages": [
+      {
+        "from": "@910542331204420",
+        "text": "",
+        "timestamp": "2025-07-20 16:57"
+      },
+      {
+        "from": "Me",
+        "text": "Lol that's so true",
+        "timestamp": "2025-07-21 06:14"
+      },
+      {
+        "from": "@910542331204420",
+        "text": "Ok call me when you get home",
+        "timestamp": "2025-07-21 11:59"
+      },
+      {
+        "from": "Me",
+        "text": "Yessir",
+        "timestamp": "2025-07-21 11:59"
+      },
+      {
+        "from": "@John",
+        "text": "Sorry mate I fell asleep last night",
+        "timestamp": "2025-07-22 04:30"
+      }
+    ],
+    "user_id": "910542331204420"
+  },
+  "513771937760271": {
+    "user_id": "513771937760271",
+    "name": "Me",
+    "likes": [],
+    "personality_tags": [],
+    "inside_jokes": [],
+    "details": {},
+    "conversation_goals": [],
+    "previous_messages": [
+      {
+        "from": "Me",
+        "text": "Noroc",
+        "timestamp": "2025-07-22 05:22"
+      },
+      {
+        "from": "Me",
+        "text": "Tio mai venit banii",
+        "timestamp": "2025-07-22 05:22"
+      },
+      {
+        "from": "Me",
+        "text": "",
+        "timestamp": "2025-07-22 05:22"
+      },
+      {
+        "from": "Me",
+        "text": "",
+        "timestamp": "2025-07-22 05:22"
+      },
+      {
+        "from": "Me",
+        "text": "Noroc",
+        "timestamp": "2025-07-22 05:22"
+      },
+      {
+        "from": "Me",
+        "text": "Da mi-au venit aseară și nu am reușit să-ți spun",
+        "timestamp": "2025-07-22 05:22"
+      },
+      {
+        "from": "Me",
+        "text": "Bine bine ma bucur",
+        "timestamp": "2025-07-22 05:22"
+      },
+      {
+        "from": "Me",
+        "text": "",
+        "timestamp": "2025-07-22 05:28"
+      },
+      {
+        "from": "Me",
+        "text": "Aseară eram în mașină dar tu erai ocupat cu nanu",
+        "timestamp": "2025-07-22 05:28"
+      },
+      {
+        "from": "Me",
+        "text": "Nui nimic, prosta imi era interesant daca tio venit",
+        "timestamp": "2025-07-22 05:28"
+      },
+      {
+        "from": "Me",
+        "text": "",
+        "timestamp": "2025-07-22 05:29"
+      },
+      {
+        "from": "Me",
+        "text": "",
+        "timestamp": "2025-07-22 05:29"
+      },
+      {
+        "from": "Me",
+        "text": "Ai venit tot bănuț în bănuț",
+        "timestamp": "2025-07-22 05:29"
+      }
+    ],
+    "memory_vector_ids": []
+  }
+}

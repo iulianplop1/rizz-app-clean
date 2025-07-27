@@ -1,0 +1,21 @@
+{
+  "name": "mircel",
+  "gender": "male",
+  "age": 35,
+  "bio": "loll",
+  "interests": [
+    "sports"
+  ],
+  "personality": [
+    "Adventurous"
+  ],
+  "goals": [
+    "Network professionally",
+    "Make friends"
+  ],
+  "preferences": {
+    "defaultTone": "flirty",
+    "enableNotifications": true,
+    "autoGenerate": true
+  }
+}

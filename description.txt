@@ -1,0 +1,922 @@
+# 🚀 **COMPREHENSIVE ANALYSIS: Instagram AI Wingman Project**
+
+## **📋 PROJECT OVERVIEW**
+
+The **Instagram AI Wingman** is a sophisticated full-stack web application designed to assist users in managing Instagram conversations with multiple girls through AI-powered features, advanced analytics, and intelligent conversation management. This project combines React frontend, Flask backend, and Google Gemini AI to create a comprehensive dating assistant platform.
+
+---
+
+## **️ BACKEND ARCHITECTURE (Flask)**
+
+### ** `backend/app.py` - Main Flask Application (373 lines)**
+
+#### **🔧 Core Setup & Configuration**
+- **Flask App Initialization**: Creates Flask app with CORS enabled for cross-origin requests
+- **Data Paths**: Defines file paths for profiles, user profile, and settings storage
+- **File Encoding**: Uses UTF-8 encoding for proper emoji and special character handling
+
+#### **💾 Data Management Functions**
+
+**`load_profiles()`**
+- Loads girl profiles from `profiles.json`
+- Returns empty dictionary if file doesn't exist
+- Handles file reading with proper error handling
+
+**`save_profiles(profiles)`**
+- Saves profile data to JSON file with proper formatting
+- Uses `ensure_ascii=False` for emoji support
+- Maintains data integrity with proper indentation
+
+**`load_user_profile()` & `save_user_profile(profile)`**
+- Manages user's own profile information
+- Stores personal details, preferences, and personality traits
+- Handles both reading and writing operations
+
+#### **🤖 AI Integration Functions**
+
+**`build_prompt(profile, user_profile, last_message)`**
+- **Purpose**: Constructs comprehensive prompts for Gemini AI
+- **Input Data**: Girl's profile, user's profile, and last message
+- **Context Building**: 
+  - User information (name, gender, age, likes, personality, bio)
+  - Girl's information (name, likes, personality, inside jokes, details)
+  - Conversation goals and recent message history (last 20 messages)
+  - Tone preferences and conversation objectives
+- **Output**: Structured prompt for AI reply generation
+
+**`call_gemini(prompt)`**
+- **API Integration**: Direct calls to Google Gemini 2.5 Flash model
+- **Configuration**: Temperature 0.7, max 2048 tokens
+- **Error Handling**: Comprehensive error catching and logging
+- **Response Processing**: Returns parsed JSON response or None on failure
+
+**`extract_replies(ai_response)`**
+- **JSON Parsing**: Extracts 3 AI-generated replies from response
+- **Regex Processing**: Uses regex to find JSON objects in AI output
+- **Fallback Handling**: Returns empty array if parsing fails
+- **Format**: Returns array of 3 reply strings
+
+#### **🔍 Profile Data Extraction**
+
+**`build_extraction_prompt(message, sender_is_me)`**
+- **Purpose**: Creates prompts for extracting profile information from messages
+- **Context Awareness**: Different prompts for user vs girl messages
+- **Data Fields**: Extracts likes, personality tags, inside jokes, and details
+- **JSON Output**: Structured data extraction format
+
+**`extract_profile_fields(ai_response)`**
+- **Parsing Logic**: Extracts profile data from AI responses
+- **Multiple Fallbacks**: Handles various JSON formats and edge cases
+- **Error Recovery**: Graceful handling of malformed responses
+- **Data Validation**: Ensures extracted data is properly structured
+
+#### **🌐 API Endpoints**
+
+**Profile Management**
+- `GET /api/profiles` - Retrieves all girl profiles
+- `GET /api/profiles/<user_id>` - Gets specific profile by ID
+- `PUT /api/profiles/<user_id>` - Updates profile data
+- `POST /api/profiles` - Creates new profile
+
+**User Management**
+- `GET /api/user` - Retrieves user profile
+- `PUT /api/user` - Updates user profile
+
+**Conversation Management**
+- `GET /api/conversations/<user_id>` - Gets conversation messages
+- `POST /api/conversations/<user_id>` - Adds new message to conversation
+
+**AI Features**
+- `POST /api/ai/reply` - Generates AI replies with context
+  - **Input**: user_id, last_message, goal, tone
+  - **Processing**: Builds comprehensive prompt with profile data
+  - **Output**: 3 AI-generated reply options
+  - **Tone Support**: Handles custom tones and Nuclear Flirt mode
+
+**Analytics**
+- `GET /api/analytics` - Returns basic analytics data
+  - Total profiles count
+  - Total messages across all conversations
+
+**Settings Management**
+- `GET /api/settings` - Retrieves user settings and API keys
+  - **Default Settings**: Provides sensible defaults for new users
+  - **File Loading**: Loads from `settings.json` or creates defaults
+  - **Structure**: API keys and preferences sections
+
+- `PUT /api/settings` - Saves user settings
+  - **Data Persistence**: Saves to `settings.json` file
+  - **Error Handling**: Comprehensive error catching
+  - **Validation**: Ensures data structure integrity
+
+- `POST /api/test-gemini` - Tests Gemini API key validity
+  - **API Validation**: Makes test call to Gemini API
+  - **Key Verification**: Confirms API key is working
+  - **Error Reporting**: Returns detailed error messages
+
+#### **📱 Instagram Webhook Integration**
+
+**`/webhook` Endpoint**
+- **GET Method**: Handles Instagram webhook verification
+  - Verifies webhook token (`iulian`)
+  - Returns challenge response for webhook setup
+  - Security validation for Instagram integration
+
+- **POST Method**: Processes incoming Instagram messages
+  - **Message Processing**: Extracts sender, recipient, timestamp, text
+  - **Profile Management**: Creates or updates girl profiles automatically
+  - **Message Storage**: Adds messages to conversation history
+  - **AI Extraction**: Automatically extracts preferences from messages
+  - **Data Enrichment**: Updates profile with new information
+  - **Message Limits**: Keeps last 50 messages per profile
+
+**Webhook Features**
+- **Automatic Profile Creation**: Creates profiles for new conversations
+- **Real-time Processing**: Handles messages as they arrive
+- **Preference Extraction**: Uses AI to extract likes, personality, jokes
+- **Data Enrichment**: Continuously improves profile data
+- **Message History**: Maintains conversation timeline
+
+### **📦 `backend/requirements.txt` - Python Dependencies**
+```
+blinker==1.9.0          # Flask extension support
+click==8.2.1           # Command line interface
+colorama==0.4.6        # Colored terminal output
+Flask==3.1.1           # Web framework
+flask-cors==6.0.1      # Cross-origin resource sharing
+itsdangerous==2.2.0    # Security utilities
+Jinja2==3.1.6          # Template engine
+MarkupSafe==3.0.2      # HTML/XML escaping
+Werkzeug==3.1.3        # WSGI utilities
+```
+
+### **⚙️ `backend/settings.json` - Default Settings**
+```json
+{
+  "apiKeys": {
+    "geminiApiKey": "",
+    "instagramBusinessId": "",
+    "telegramBotToken": "",
+    "telegramChatId": ""
+  },
+  "preferences": {
+    "autoExtractPreferences": true,
+    "autoGenerateReplies": false,
+    "sendTelegramNotifications": true,
+    "enableWebhook": true,
+    "maxMessagesPerProfile": 50,
+    "aiTemperature": 0.7,
+    "defaultTone": "flirty"
+  }
+}
+```
+
+### **👤 `backend/user_profile.json` - User Profile Data**
+```json
+{
+  "name": "Iulian",
+  "gender": "male",
+  "age": 19,
+  "interests": ["fitness", "travel", "music"],
+  "personality": ["funny", "confident", "adventurous"],
+  "bio": "I'm a 19-year-old guy who loves fitness, travel, and good conversation.",
+  "likes": ["dogs", "pandas", "icecream"],
+  "personality_tags": ["affectionate", "enjoys simple pleasures", "direct"],
+  "inside_jokes": [],
+  "details": {}
+}
+```
+
+### **📊 `backend/profiles.json` - Girl Profiles Database**
+**Structure for each profile:**
+- **user_id**: Unique Instagram user identifier
+- **name**: Display name
+- **likes**: Array of discovered interests
+- **personality_tags**: Personality traits extracted from messages
+- **inside_jokes**: Shared jokes and references
+- **details**: Additional information (pet names, locations, etc.)
+- **conversation_goals**: Relationship objectives
+- **previous_messages**: Complete conversation history
+- **memory_vector_ids**: For future AI memory features
+- **tone_preference**: Preferred conversation tone
+
+**Sample Profile Data:**
+```json
+{
+  "1367480801045644": {
+    "conversation_goals": ["get her to go on a date with me (not push things)"],
+    "details": {"pet_name": "Max (dog)"},
+    "inside_jokes": ["less messy than the last one (adventure)", "sushi incident"],
+    "likes": ["adventures", "pandas", "sushi", "The Notebook", "fishing"],
+    "personality_tags": ["adventurous", "friendly", "optimistic", "animal lover"],
+    "previous_messages": [
+      {
+        "from": "1367480801045644",
+        "text": "Hey",
+        "timestamp": "2025-07-18 08:07"
+      }
+    ]
+  }
+}
+```
+
+### **📱 `backend/insta_dm_listener.py` - Instagram Integration (463 lines)**
+
+#### **🔧 Configuration & Setup**
+- **Access Token**: Facebook/Instagram API access token
+- **Poll Interval**: 30-second polling for new messages
+- **User Mapping**: Maps Instagram IDs to custom names
+- **Business Account ID**: Instagram business account identifier
+
+#### **📡 API Integration Functions**
+
+**`get_my_pages(access_token)`**
+- Fetches user's Facebook pages
+- Returns page data for Instagram business account access
+
+**`get_page_ig_id(page_id, page_access_token)`**
+- Gets Instagram business account ID from Facebook page
+- Required for Instagram API access
+
+**`get_ig_conversations(ig_id, page_access_token)`**
+- Fetches Instagram conversations
+- Retrieves participants and recent messages
+- Handles API pagination and rate limiting
+
+#### ** Profile Management**
+
+**`get_or_create_profile(user_id, username)`**
+- Creates new profiles for unknown users
+- Ensures all required fields exist
+- Maintains profile data structure consistency
+
+**`log_my_reply(girl_id, text, timestamp)`**
+- Records user's sent messages
+- Updates conversation history
+- Maintains message timeline
+
+#### ** AI Integration**
+
+**`build_extraction_prompt(message, sender_is_me)`**
+- Creates prompts for profile data extraction
+- Differentiates between user and girl messages
+- Focuses on extracting relevant information
+
+**`call_gemini_extraction(prompt)`**
+- Calls Gemini API for profile extraction
+- Handles API errors and timeouts
+- Returns structured profile data
+
+**`extract_profile_fields(ai_response)`**
+- Parses AI responses for profile information
+- Handles various JSON formats
+- Extracts likes, personality, jokes, and details
+
+#### ** Webhook Processing**
+
+**`/webhook` Endpoint**
+- **Verification**: Handles Instagram webhook verification
+- **Message Processing**: Processes incoming Instagram messages
+- **Profile Updates**: Automatically updates girl profiles
+- **AI Extraction**: Extracts preferences from new messages
+- **Telegram Integration**: Optional notification system
+
+**Webhook Features**
+- **Real-time Processing**: Handles messages as they arrive
+- **Automatic Profile Creation**: Creates profiles for new conversations
+- **Data Enrichment**: Continuously improves profile data
+- **Message History**: Maintains complete conversation timeline
+- **Error Handling**: Robust error handling and logging
+
+---
+
+## ** FRONTEND ARCHITECTURE (React)**
+
+### **📦 `frontend/package.json` - Dependencies**
+```json
+{
+  "dependencies": {
+    "@emotion/react": "^11.14.0",        // CSS-in-JS styling
+    "@emotion/styled": "^11.14.1",       // Styled components
+    "@mui/icons-material": "^7.2.0",     // Material-UI icons
+    "@mui/material": "^7.2.0",           // Material-UI components
+    "axios": "^1.10.0",                  // HTTP client
+    "react": "^19.1.0",                  // React framework
+    "react-dom": "^19.1.0",              // React DOM
+    "react-router-dom": "^7.7.0",        // Routing
+    "react-scripts": "^5.0.1",           // Create React App
+    "recharts": "^3.1.0"                 // Chart library
+  }
+}
+```
+
+### **🏠 `frontend/src/App.js` - Main Application (98 lines)**
+
+#### **🎨 UI Components**
+
+**`Sidebar()` Component**
+- **Navigation**: Permanent sidebar with navigation links
+- **Icons**: Material-UI icons for each section
+- **Routing**: React Router integration for page navigation
+- **Sections**: Inbox, Profiles, AI Assistant, Analytics, Settings
+
+**`TopBar()` Component**
+- **App Title**: "AI Wingman Dashboard"
+- **Dark Mode Toggle**: Switch between light/dark themes
+- **Responsive Design**: Adapts to different screen sizes
+
+**`App()` Component**
+- **Router Setup**: BrowserRouter with route configuration
+- **Layout**: Flexbox layout with sidebar and main content
+- **Routes**: 
+  - `/inbox` - Main inbox view
+  - `/inbox/:id` - Individual conversation view
+  - `/profiles` - Profile management
+  - `/ai-assistant` - AI chat interface
+  - `/analytics` - Analytics dashboard
+  - `/settings` - Settings page
+  - `/*` - Default to inbox
+
+### **📬 `frontend/src/pages/Inbox.js` - Main Inbox View (114 lines)**
+
+#### **🧠 Mood Analysis System**
+
+**`analyzeMood(messages)` Function**
+- **Keyword Analysis**: Analyzes last 5 messages for sentiment
+- **Mood Categories**: 
+  - `flirty`: love, amazing, great, happy, fun, 😍, 😄, 😊, 😘, flirt, kiss, cute, hot, babe, sweet
+  - `angry`: angry, mad, annoy, hate, 😠, 😡, wtf, ugh
+  - `sad`: sad, cry, miss, lonely, 😢, 😭
+  - `neutral`: ok, fine, alright, neutral, meh, 😐
+  - `happy`: default positive mood
+
+**Mood Display**
+- **Emoji Mapping**: Visual mood indicators
+- **Tooltips**: Hover information for mood details
+- **Real-time Updates**: Updates as conversations change
+
+#### **📊 Relationship Progress Algorithm**
+
+**`computeProgress(profile)` Function**
+**Advanced 4-Factor Scoring System:**
+
+1. **Goal Proximity (40%)**
+   - Analyzes conversation goals against recent messages
+   - Keywords: call, date, meet, agree, yes, sure, let's, hang, see you, video, voice
+   - Scores 40 points if goal keywords found in last 10 messages
+
+2. **Sentiment/Friendliness (30%)**
+   - Analyzes her messages for positive sentiment
+   - Positive words: love, great, happy, fun, 😍, 😄, 😊, 😘, flirt, kiss, cute, hot, babe, sweet, yes, sure, haha, lol, amazing, awesome, excited, enjoy, like, good, nice, thanks, thank you, see you, call, date, meet, voice, video
+   - Scores up to 30 points based on positive word frequency
+
+3. **Engagement (20%)**
+   - Message count: Up to 20 points
+   - Inside jokes: 5 points per joke (max 10)
+   - Emoji usage: Up to 10 points
+   - Total engagement score capped at 20 points
+
+4. **Consistency (10%)**
+   - Conversation frequency over time
+   - Scores based on number of unique days with messages
+   - Maximum 10 points for consistent communication
+
+**Visual Progress Display**
+- **Color-coded Progress Bars**: 
+  - Green (>75%): High progress
+  - Yellow (50-75%): Medium progress  
+  - Blue (<50%): Low progress
+- **Percentage Display**: Shows exact progress percentage
+- **Real-time Updates**: Updates every 3 seconds
+
+#### ** Real-time Features**
+
+**Auto-refresh System**
+- **Polling Interval**: 3-second refresh cycle
+- **Data Fetching**: Fetches profiles from backend API
+- **State Management**: Updates UI with new data
+- **Performance**: Efficient updates without full page reload
+
+**Profile Cards**
+- **Avatar Display**: Shows first letter of name
+- **Last Message**: Displays most recent message text
+- **Click Navigation**: Routes to individual conversation view
+- **Responsive Design**: Adapts to different screen sizes
+
+### **💬 `frontend/src/pages/ConversationView.js` - Chat Interface (569 lines)**
+
+#### **🔍 Advanced Search System**
+
+**Search Functionality**
+- **Real-time Search**: Searches through all messages in conversation
+- **Case-insensitive**: Finds matches regardless of case
+- **Navigation**: Previous/Next buttons to navigate results
+- **Highlighting**: Highlights found messages temporarily
+- **Results Summary**: Shows total results and current position
+- **Clear Function**: Resets search state
+
+**Search Features**
+- **Keyboard Support**: Enter key to search
+- **Visual Feedback**: Message highlighting with yellow background
+- **Result Counter**: "X of Y results" display
+- **Auto-scroll**: Scrolls to found messages
+- **Search Disable**: Disables auto-scroll during search
+
+#### ** AI Integration**
+
+**Message Polish Feature**
+- **Input Processing**: Takes user's draft message
+- **AI Enhancement**: Sends to backend for AI improvement
+- **Tone Control**: Applies selected tone preference
+- **Goal Integration**: Considers conversation goals
+- **Nuclear Flirt Mode**: Bold, high-impact messages
+
+**AI Reply Generation**
+- **Context Awareness**: Uses full conversation context
+- **Profile Data**: Incorporates girl's profile information
+- **User Profile**: Uses user's personality and preferences
+- **Multiple Options**: Generates 3 different reply suggestions
+- **Tone Customization**: Applies selected conversation tone
+
+**Auto AI System**
+- **Automatic Triggering**: Responds to new messages automatically
+- **Smart Detection**: Only triggers for her messages (not user's)
+- **Duplicate Prevention**: Prevents multiple responses to same message
+- **Context Preservation**: Maintains conversation flow
+
+#### **🎛️ Conversation Controls**
+
+**Tone Management**
+- **Predefined Tones**: flirty, playful, serious, witty, romantic, casual, professional
+- **Custom Tones**: User-defined tone preferences
+- **Visual Feedback**: Shows current tone in highlighted box
+- **Success Notifications**: Confirms tone updates with alerts
+- **Real-time Updates**: Updates immediately after saving
+
+**Conversation Goals**
+- **Goal Setting**: Define relationship objectives
+- **Goal Tracking**: Monitor progress toward goals
+- **AI Integration**: Goals influence AI reply generation
+- **Visual Feedback**: Success notifications for updates
+
+**Nuclear Flirt Mode**
+- **Bold Messages**: High-impact, attention-grabbing replies
+- **Risk Assessment**: Advanced flirting with maximum impact
+- **Toggle Control**: Enable/disable as needed
+- **Description**: Clear explanation of mode purpose
+
+#### **📱 Message Display**
+
+**Chat Interface**
+- **Message Bubbles**: Different styles for sent vs received
+- **Timestamps**: Shows message timing
+- **Auto-scroll**: Automatically scrolls to new messages
+- **Responsive Design**: Adapts to different screen sizes
+- **Visual Hierarchy**: Clear distinction between participants
+
+**Message Features**
+- **Color Coding**: Blue for user messages, gray for hers
+- **Max Width**: 70% width for readability
+- **Smooth Transitions**: CSS transitions for visual appeal
+- **Timestamp Display**: Shows exact message timing
+
+#### **🔔 User Feedback System**
+
+**Success Notifications**
+- **Snackbar Alerts**: Non-intrusive success messages
+- **Auto-dismiss**: Disappears after 3 seconds
+- **Positioning**: Bottom-left corner placement
+- **Severity Levels**: Success, error, warning states
+
+**Loading States**
+- **Button Disabling**: Prevents multiple submissions
+- **Loading Indicators**: Shows processing state
+- **Error Handling**: Graceful error recovery
+- **User Feedback**: Clear indication of system status
+
+### **📊 `frontend/src/pages/Analytics.js` - Analytics Dashboard (906 lines)**
+
+#### **📈 Comprehensive Analytics Engine**
+
+**Data Processing Functions**
+
+**`calculateAnalytics()` Function**
+- **Total Metrics**: Messages, likes, personality tags, inside jokes
+- **Message Breakdown**: Her messages vs user messages
+- **Response Time Analysis**: Average response times in seconds
+- **Word Analysis**: Top words used by each participant
+- **Emoji Analysis**: Most used emojis in conversations
+- **Compliment Tracking**: Compliment frequency and types
+- **Flag Detection**: Green and red flag identification
+- **Sentiment Analysis**: Positive, negative, neutral message classification
+- **Engagement Metrics**: Overall conversation engagement scores
+- **Performance Ranking**: Top performers based on multiple factors
+
+#### **📊 Advanced Metrics**
+
+**Response Time Analysis**
+- **Calculation Method**: Time difference between consecutive messages
+- **Filtering**: Excludes gaps longer than 7 days
+- **Color Coding**: 
+  - Green (<1 hour): Fast responses
+  - Yellow (1-24 hours): Medium responses
+  - Red (>24 hours): Slow responses
+- **Per-participant**: Separate tracking for her vs user responses
+
+**Word & Emoji Analysis**
+- **Word Processing**: Filters words longer than 2 characters
+- **Emoji Detection**: Unicode regex for emoji identification
+- **Frequency Counting**: Tracks usage frequency
+- **Top Lists**: Shows top 5-10 most used words/emojis
+- **Per-participant**: Separate analysis for each person
+
+**Compliment Analysis**
+- **Compliment Detection**: 20+ compliment words tracked
+- **Frequency Tracking**: Counts compliment usage
+- **Per-participant**: Separate tracking for each person
+- **Top Compliments**: Shows most used compliment types
+
+**Flag Detection System**
+**Green Flags:**
+- respectful, interested, supportive, communicative, consistent, positive
+**Red Flags:**
+- controlling, disrespectful, inconsistent, negative, possessive, aggressive
+- **Pattern Matching**: Regex-based flag detection
+- **Frequency Counting**: Tracks flag occurrences
+- **Examples Display**: Shows specific flag types found
+
+#### **📊 Visualization Components**
+
+**Key Metrics Cards**
+- **Total Messages**: Overall message count
+- **Active Conversations**: Number of active profiles
+- **Total Likes**: Discovered interests across all profiles
+- **Inside Jokes**: Shared jokes and references
+
+**Chart Visualizations**
+- **Bar Charts**: Message activity, breakdown, engagement
+- **Pie Charts**: Sentiment distribution
+- **Radar Charts**: Engagement analysis
+- **Area Charts**: Time-based activity trends
+- **Line Charts**: Response time trends
+
+**Individual Profile Analytics**
+- **Per-girl Cards**: Detailed metrics for each profile
+- **Message Counts**: Her vs user message breakdown
+- **Response Times**: Average response times in seconds
+- **Top Words**: Most used words by each person
+- **Top Emojis**: Most used emojis by each person
+- **Compliments**: Compliment usage patterns
+- **Flags**: Green and red flag examples
+
+#### **🎯 Insights & Recommendations**
+
+**AI Insights**
+- **Hot Streak**: Identifies most active conversation
+- **Growth Opportunity**: Suggests engagement improvements
+- **AI Suggestions**: Personalized recommendations
+- **Performance Analysis**: Identifies top performers
+
+**Trend Analysis**
+- **Weekly Activity**: 7-day activity patterns
+- **Engagement Trends**: Conversation depth analysis
+- **Response Patterns**: Response time trends
+- **Sentiment Trends**: Mood changes over time
+
+### **⚙️ `frontend/src/pages/Settings.js` - Settings Management (475 lines)**
+
+#### **👤 User Profile Management**
+
+**Profile Fields**
+- **Basic Info**: Name, gender, age, bio
+- **Dynamic Interests**: Add/remove interests with individual fields
+- **Personality Traits**: Add/remove personality traits
+- **Real-time Editing**: All fields update immediately
+
+**Dynamic Lists**
+- **Interest Management**: Add/remove interests dynamically
+- **Personality Management**: Add/remove personality traits
+- **Visual Feedback**: Clear add/remove buttons
+- **Data Validation**: Ensures data integrity
+
+#### ** API Key Management**
+
+**Gemini API Configuration**
+- **Secure Input**: Password field with show/hide toggle
+- **API Testing**: Test button to validate API key
+- **Helpful Links**: Direct link to Google AI Studio
+- **Error Handling**: Clear error messages for invalid keys
+
+**Instagram Integration**
+- **Business Account ID**: Instagram business account setup
+- **Webhook Configuration**: Instagram webhook settings
+- **Optional Features**: Non-required configuration
+
+**Telegram Integration**
+- **Bot Token**: Telegram bot configuration
+- **Chat ID**: User's Telegram chat ID
+- **Notifications**: Optional notification system
+
+#### **⚙️ Preferences Configuration**
+
+**AI Behavior Settings**
+- **Auto-extract Preferences**: Automatically extract data from messages
+- **Auto-generate Replies**: Automatic AI response generation
+- **AI Temperature**: Control AI creativity (0.0-1.0)
+- **Default Tone**: Set default conversation tone
+
+**System Preferences**
+- **Telegram Notifications**: Enable/disable notifications
+- **Webhook Enable**: Turn Instagram webhook on/off
+- **Max Messages**: Limit conversation history per profile
+
+**Tone Options**
+- **Predefined Tones**: flirty, playful, serious, witty, romantic, casual, professional
+- **Custom Tones**: User-defined tone preferences
+- **Default Selection**: Set preferred default tone
+
+#### **💾 Data Management**
+
+**Settings Persistence**
+- **Local Storage**: Settings saved to `settings.json`
+- **API Integration**: Backend settings management
+- **Error Handling**: Comprehensive error recovery
+- **Success Feedback**: Clear success/error messages
+
+**Data Validation**
+- **Input Validation**: Ensures data integrity
+- **Required Fields**: Validates essential settings
+- **Format Checking**: Ensures proper data formats
+- **Error Recovery**: Graceful handling of invalid data
+
+### **🤖 `frontend/src/pages/AIAssistant.js` - AI Chat Interface (354 lines)**
+
+#### **🎯 Context-Aware AI System**
+
+**Profile Selection**
+- **Dropdown Interface**: Select specific girl profiles
+- **General Questions**: Option for general dating advice
+- **Profile Display**: Shows selected profile information
+- **Context Integration**: Uses profile data for responses
+
+**Context Building**
+- **Profile Data**: Incorporates girl's profile information
+- **Conversation History**: Uses last 20 messages for context
+- **User Profile**: Includes user's personality and preferences
+- **Dynamic Prompts**: Creates context-aware prompts
+
+#### **💬 AI Response Generation**
+
+**Profile-Specific Responses**
+- **Context Prompt**: Builds comprehensive context for AI
+- **Profile Information**: Name, username, tone preference, likes, personality, inside jokes, details, conversation goals
+- **Recent Messages**: Last 20 messages for conversation context
+- **Personalized Responses**: Tailored to specific girl's profile
+
+**General Questions**
+- **Dating Advice**: General dating and conversation strategies
+- **Relationship Tips**: Advice for managing multiple conversations
+- **Strategy Guidance**: Practical advice for dating success
+
+**Direct API Integration**
+- **Gemini API**: Direct calls to Google Gemini 2.5 Flash
+- **Error Handling**: Comprehensive error recovery
+- **Response Processing**: Handles API responses and errors
+- **Fallback Messages**: Graceful error handling
+
+#### ** User Interface**
+
+**Chat Interface**
+- **Message History**: Scrollable chat history
+- **Loading States**: Shows when AI is processing
+- **Error Handling**: Displays error messages clearly
+- **Responsive Design**: Adapts to different screen sizes
+
+**Profile Information Display**
+- **Selected Profile**: Shows current profile information
+- **Likes Display**: Shows girl's interests as chips
+- **Personality Tags**: Displays personality traits
+- **Inside Jokes**: Shows shared jokes and references
+- **Visual Organization**: Clean, organized information display
+
+### **👥 `frontend/src/pages/Profiles.js` - Profile Management (160 lines)**
+
+#### **📋 Profile Display & Management**
+
+**Profile Cards**
+- **Avatar Display**: Shows first letter of name
+- **Mood Indicators**: Real-time mood analysis
+- **Progress Bars**: Relationship progress visualization
+- **Profile Information**: Likes, personality, jokes, goals
+
+**Profile Editing**
+- **Dialog Interface**: Modal editing window
+- **Field Management**: Edit all profile fields
+- **Dynamic Lists**: Add/remove likes, personality tags, jokes
+- **JSON Details**: Edit additional profile details
+
+#### **🔧 Editing Features**
+
+**EditableChips Component**
+- **Dynamic Lists**: Add/remove items dynamically
+- **Keyboard Support**: Enter key to add new items
+- **Visual Feedback**: Clear add/remove buttons
+- **Data Validation**: Ensures data integrity
+
+**ProfileEditor Component**
+- **Modal Interface**: Full-screen editing dialog
+- **Field Validation**: Ensures proper data formats
+- **Save/Cancel**: Clear save and cancel options
+- **Real-time Updates**: Updates immediately after saving
+
+#### **📊 Progress Tracking**
+
+**Relationship Progress**
+- **Advanced Algorithm**: Same 4-factor scoring as Inbox
+- **Visual Display**: Color-coded progress bars
+- **Real-time Updates**: Updates as data changes
+- **Consistent Scoring**: Same algorithm across all views
+
+**Mood Analysis**
+- **Real-time Analysis**: Analyzes recent messages
+- **Visual Indicators**: Emoji mood display
+- **Tooltip Information**: Hover for mood details
+- **Consistent Algorithm**: Same mood analysis as Inbox
+
+---
+
+## ** TECHNICAL FEATURES & INTEGRATIONS**
+
+### **🤖 AI Integration (Google Gemini)**
+
+**Model Configuration**
+- **Model**: Gemini 2.5 Flash
+- **Temperature**: 0.7 (balanced creativity)
+- **Max Tokens**: 2048 (comprehensive responses)
+- **API Version**: v1beta
+
+**Prompt Engineering**
+- **Context Building**: Comprehensive context from profiles and messages
+- **Tone Control**: Custom tone preferences and Nuclear Flirt mode
+- **Goal Integration**: Conversation goals influence AI responses
+- **Profile Awareness**: AI understands both user and girl profiles
+
+**Response Processing**
+- **JSON Parsing**: Extracts structured data from AI responses
+- **Fallback Handling**: Graceful handling of malformed responses
+- **Error Recovery**: Comprehensive error handling and logging
+- **Multiple Formats**: Handles various response formats
+
+### **📱 Instagram Integration**
+
+**Webhook System**
+- **Real-time Processing**: Handles messages as they arrive
+- **Verification**: Instagram webhook verification system
+- **Message Parsing**: Extracts sender, recipient, timestamp, text
+- **Profile Management**: Automatic profile creation and updates
+
+**API Integration**
+- **Facebook Pages API**: Access to Instagram business accounts
+- **Conversation Polling**: 30-second polling for new messages
+- **Message History**: Complete conversation timeline
+- **User Mapping**: Maps Instagram IDs to custom names
+
+**Data Extraction**
+- **Automatic Extraction**: AI extracts preferences from messages
+- **Profile Enrichment**: Continuously improves profile data
+- **Preference Discovery**: Finds likes, personality, jokes, details
+- **Real-time Updates**: Updates profiles as conversations progress
+
+### **📊 Analytics Engine**
+
+**Data Processing**
+- **Real-time Calculation**: Calculates metrics on-demand
+- **Multi-factor Analysis**: Complex algorithms for relationship scoring
+- **Pattern Recognition**: Identifies conversation patterns
+- **Trend Analysis**: Tracks changes over time
+
+**Visualization**
+- **Chart Library**: Recharts for data visualization
+- **Multiple Chart Types**: Bar, pie, radar, area, line charts
+- **Responsive Design**: Adapts to different screen sizes
+- **Interactive Elements**: Hover tooltips and click interactions
+
+**Metrics Tracking**
+- **Message Analysis**: Comprehensive message statistics
+- **Response Times**: Detailed response time analysis
+- **Sentiment Analysis**: Mood and sentiment tracking
+- **Engagement Metrics**: Conversation depth and consistency
+
+### ** Security & Privacy**
+
+**Data Storage**
+- **Local Storage**: All data stored locally in JSON files
+- **No External Sharing**: Conversations stay on user's device
+- **API Key Security**: Secure storage of API keys
+- **Privacy Protection**: No data sent to external servers
+
+**API Security**
+- **HTTPS Communication**: Secure API calls
+- **Error Handling**: Comprehensive error handling
+- **Input Validation**: Validates all user inputs
+- **Data Validation**: Ensures data integrity
+
+---
+
+## ** USER EXPERIENCE FEATURES**
+
+### **🔄 Real-time Updates**
+- **3-second Polling**: Automatic data refresh
+- **Live Updates**: Real-time conversation monitoring
+- **Progress Tracking**: Live relationship progress updates
+- **Mood Analysis**: Real-time sentiment analysis
+
+### **🎨 Visual Design**
+- **Material-UI**: Modern, responsive design system
+- **Color Coding**: Intuitive color schemes for different states
+- **Progress Indicators**: Visual progress bars and indicators
+- **Icon System**: Comprehensive icon library for clear navigation
+
+### **📱 Responsive Design**
+- **Mobile Support**: Works on all screen sizes
+- **Flexible Layout**: Adapts to different viewport sizes
+- **Touch Support**: Optimized for touch interfaces
+- **Cross-platform**: Works on desktop and mobile browsers
+
+### **🔔 User Feedback**
+- **Success Notifications**: Clear feedback for user actions
+- **Error Messages**: Helpful error messages and recovery
+- **Loading States**: Clear indication of system status
+- **Progress Indicators**: Visual feedback for long operations
+
+---
+
+## **🚀 DEPLOYMENT & CONFIGURATION**
+
+### **️ Setup Process**
+1. **Backend Setup**: Python virtual environment and dependencies
+2. **Frontend Setup**: Node.js dependencies and build process
+3. **API Configuration**: Gemini API key setup and testing
+4. **Instagram Integration**: Business account and webhook setup
+5. **Initial Configuration**: User profile and preferences setup
+
+### **⚙️ Configuration Options**
+- **API Keys**: Gemini, Instagram, Telegram configuration
+- **User Preferences**: AI behavior, tone preferences, notifications
+- **System Settings**: Message limits, auto-features, webhook settings
+- **Profile Management**: User profile and personality setup
+
+### ** Maintenance**
+- **Data Backup**: Regular backup of JSON data files
+- **API Monitoring**: Monitor API usage and limits
+- **Error Logging**: Comprehensive error logging and monitoring
+- **Performance Optimization**: Regular performance monitoring
+
+---
+
+## **📈 PROJECT SCOPE & CAPABILITIES**
+
+### **🎯 Primary Functions**
+1. **Conversation Management**: Complete Instagram conversation tracking
+2. **AI Assistance**: Smart reply generation and message polishing
+3. **Profile Management**: Comprehensive girl profile management
+4. **Analytics**: Detailed conversation and relationship analytics
+5. **Settings Management**: Complete system configuration
+
+### **🔮 Advanced Features**
+1. **Nuclear Flirt Mode**: High-impact flirting with maximum effect
+2. **Real-time Search**: Advanced message search and navigation
+3. **Mood Analysis**: Real-time sentiment and mood tracking
+4. **Progress Tracking**: Advanced relationship progress algorithms
+5. **Flag Detection**: Green and red flag identification
+
+### **📊 Analytics Capabilities**
+1. **Per-girl Analytics**: Detailed metrics for each conversation
+2. **Response Time Analysis**: Comprehensive response time tracking
+3. **Word & Emoji Analysis**: Detailed communication pattern analysis
+4. **Compliment Tracking**: Compliment frequency and type analysis
+5. **Engagement Metrics**: Conversation depth and consistency analysis
+
+### ** AI Capabilities**
+1. **Context-aware Responses**: AI understands conversation context
+2. **Profile Integration**: AI uses profile data for personalized responses
+3. **Tone Control**: Custom tone preferences and Nuclear Flirt mode
+4. **Goal Integration**: AI considers conversation goals
+5. **Preference Extraction**: Automatic extraction of preferences from messages
+
+---
+
+## **🎉 CONCLUSION**
+
+The **Instagram AI Wingman** is a comprehensive, feature-rich application that combines modern web technologies with advanced AI capabilities to create a powerful dating assistant. The project demonstrates sophisticated software architecture, advanced AI integration, comprehensive analytics, and excellent user experience design.
+
+**Key Strengths:**
+- **Advanced AI Integration**: Sophisticated use of Google Gemini AI
+- **Comprehensive Analytics**: Detailed metrics and insights
+- **Real-time Features**: Live updates and monitoring
+- **User-friendly Interface**: Modern, responsive design
+- **Robust Architecture**: Well-structured backend and frontend
+- **Privacy-focused**: Local data storage and security
+- **Extensible Design**: Easy to add new features and integrations
+
+This project represents a complete solution for managing Instagram conversations with AI assistance, providing users with powerful tools for relationship management, conversation optimization, and dating success. 
