@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   Box, 
   Typography, 
@@ -7,33 +7,21 @@ import {
   Grid, 
   Card, 
   CardContent,
-  IconButton,
-  Avatar,
   Chip,
-  Fade,
   useTheme,
   useMediaQuery,
-  LinearProgress,
-  Rating,
   Accordion,
   AccordionSummary,
   AccordionDetails
 } from '@mui/material';
 import {
   SmartToy,
-  Analytics,
-  Chat,
   PhotoCamera,
   TrendingUp,
-  Person,
   Upload,
   Psychology,
   Favorite,
-  Star,
-  PlayArrow,
-  ExpandMore,
-  CheckCircle,
-  Close
+  ExpandMore
 } from '@mui/icons-material';
 import LoginDialog from './LoginDialog';
 import './WelcomePage.css';
@@ -41,18 +29,17 @@ import './WelcomePage.css';
 const WelcomePage = ({ onLogin }) => {
   const [loginOpen, setLoginOpen] = useState(false);
   const [demoStep, setDemoStep] = useState(0);
-  const [demoMessages, setDemoMessages] = useState([
+  const [demoMessages] = useState([
     { id: 1, sender: 'girl', text: 'Hey, what\'s your favorite way to spend weekends?', timestamp: '2:30 PM' },
     { id: 2, sender: 'boy', text: 'I love hiking and trying new restaurants! What about you?', timestamp: '2:32 PM' },
     { id: 3, sender: 'girl', text: 'That sounds fun! I\'m more into movies and coffee shops', timestamp: '2:35 PM' }
   ]);
-  const [aiSuggestions, setAiSuggestions] = useState([
+  const [aiSuggestions] = useState([
     'Perfect! How about we combine both? Coffee and a movie this weekend? 😊',
     'I love that! Maybe we could do a movie night and then grab coffee after?',
     'That\'s awesome! What\'s your favorite coffee shop? I\'d love to check it out sometime'
   ]);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const coreFeatures = [
     {
@@ -116,9 +103,7 @@ const WelcomePage = ({ onLogin }) => {
 
 
 
-  const handleDemoNext = () => {
-    if (demoStep < 2) setDemoStep(demoStep + 1);
-  };
+
 
   return (
     <Box sx={{ background: '#ffffff', minHeight: '100vh' }}>

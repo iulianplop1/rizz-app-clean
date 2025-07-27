@@ -12,16 +12,10 @@ import {
 } from '@mui/icons-material';
 import { profilesAPI } from '../utils/api';
 import { debounce, memoize, performanceMonitor } from '../utils/performance';
-import { BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, ResponsiveContainer, Legend } from 'recharts';
+
 import axios from 'axios';
 
-const moodEmojis = {
-  happy: '😄',
-  flirty: '😏',
-  neutral: '😐',
-  sad: '😢',
-  angry: '😠',
-};
+
 
 // Memoized mood analysis for better performance
 const analyzeMood = memoize((messages) => {
@@ -44,42 +38,7 @@ const computeCompatibility = memoize((profile) => {
   return score;
 });
 
-// Memoized progress calculation
-const computeProgress = memoize((profile) => {
-  // Advanced scoring
-  const msgs = profile.previous_messages || [];
-  const goal = (profile.conversation_goals && profile.conversation_goals[0]) || '';
-  // 1. Goal proximity (40%)
-  let goalScore = 0;
-  if (goal) {
-    const goalKeywords = goal.toLowerCase().split(/\s+/).concat(['call','date','meet','agree','yes','sure','let\'s','hang','see you','video','voice']);
-    const lastMsgs = msgs.slice(-10).map(m => m.text.toLowerCase()).join(' ');
-    goalScore = goalKeywords.some(word => lastMsgs.includes(word)) ? 40 : 0;
-  }
-  // 2. Sentiment/friendliness (30%)
-  const herMsgs = msgs.filter(m => m.from !== 'Me').slice(-10);
-  const positiveWords = /love|great|happy|fun|😍|😄|😊|😘|flirt|kiss|cute|hot|babe|sweet|yes|sure|haha|lol|amazing|awesome|excited|enjoy|like|good|nice|thanks|thank you|see you|call|date|meet|voice|video/gi;
-  let sentimentScore = 0;
-  if (herMsgs.length) {
-    const positives = herMsgs.map(m => (m.text.match(positiveWords) || []).length).reduce((a, b) => a + b, 0);
-    sentimentScore = Math.min(positives * 3, 30); // up to 30
-  }
-  // 3. Engagement (20%)
-  let engagementScore = 0;
-  const emojiCount = (msgs.map(m => (m.text.match(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E0}-\u{1F1FF}]/gu) || []).length).reduce((a, b) => a + b, 0));
-  const jokes = profile.inside_jokes?.length || 0;
-  engagementScore = Math.min(msgs.length, 20) + Math.min(jokes * 5, 10) + Math.min(emojiCount, 10);
-  engagementScore = Math.min(engagementScore, 20);
-  // 4. Consistency (10%)
-  let consistencyScore = 0;
-  if (msgs.length > 1) {
-    const days = new Set(msgs.map(m => m.timestamp && m.timestamp.split(' ')[0])).size;
-    consistencyScore = Math.min(days, 10);
-  }
-  let score = goalScore + sentimentScore + engagementScore + consistencyScore;
-  if (score > 100) score = 100;
-  return score;
-});
+
 
 function EditableChips({ label, values, onChange }) {
   const [input, setInput] = useState('');

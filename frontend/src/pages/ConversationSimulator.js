@@ -11,15 +11,9 @@ import {
   CardContent,
   Chip,
   Divider,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemAvatar,
-  Avatar,
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogActions,
   FormControl,
   InputLabel,
   Select,
@@ -27,8 +21,6 @@ import {
   Switch,
   FormControlLabel,
   Alert,
-  IconButton,
-  Tooltip,
   LinearProgress,
   Accordion,
   AccordionSummary,
@@ -38,7 +30,6 @@ import {
   PlayArrow,
   Stop,
   Refresh,
-  Person,
   Psychology,
   School,
   Settings,
@@ -49,8 +40,6 @@ import {
   Help,
   ExpandMore,
   Add,
-  Delete,
-  Edit,
   Send
 } from '@mui/icons-material';
 import axios from 'axios';
@@ -61,13 +50,11 @@ import { useNavigate } from 'react-router-dom';
 const ConversationSimulator = () => {
   const [profiles, setProfiles] = useState([]);
   const [selectedPersonality, setSelectedPersonality] = useState(null);
-  const [customPersonality, setCustomPersonality] = useState(null);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [isSimulating, setIsSimulating] = useState(false);
   const [simulationMode, setSimulationMode] = useState('practice'); // practice, training, advanced
   const [difficulty, setDifficulty] = useState('medium'); // easy, medium, hard
-  const [aiResponse, setAiResponse] = useState('');
   const [loading, setLoading] = useState(false);
   const [personalityDialog, setPersonalityDialog] = useState(false);
   const [customPersonalityDialog, setCustomPersonalityDialog] = useState(false);

@@ -180,7 +180,7 @@ export const reactPerformance = {
     
     React.useEffect(() => {
       setMemoizedValue(value);
-    }, deps);
+    }, [value, ...deps]);
     
     return memoizedValue;
   },
@@ -217,7 +217,7 @@ export const bundleOptimizer = {
   },
 };
 
-export default {
+const performanceUtils = {
   debounce,
   throttle,
   memoize,
@@ -228,4 +228,6 @@ export default {
   memoryManager,
   reactPerformance,
   bundleOptimizer,
-}; 
+};
+
+export default performanceUtils; 

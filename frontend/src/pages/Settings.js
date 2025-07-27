@@ -26,11 +26,7 @@ import {
   Refresh,
   Key,
   Person,
-  Notifications,
-  Security,
-  Settings as SettingsIcon,
-  Search as SearchIcon,
-  HelpOutline as HelpOutlineIcon
+  Notifications
 } from '@mui/icons-material';
 import axios from 'axios';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
@@ -61,7 +57,7 @@ const Settings = () => {
   });
   const [showApiKeys, setShowApiKeys] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [saveStatus, setSaveStatus] = useState({ type: '', message: '' });
+
   const [sidebarSection, setSidebarSection] = useState('profile');
 
   useEffect(() => {

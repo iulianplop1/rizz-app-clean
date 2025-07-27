@@ -5,7 +5,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import ReplyIcon from '@mui/icons-material/Reply';
 import { profilesAPI } from '../utils/api';
-import { Tooltip as MuiTooltip } from '@mui/material';
 
 // Typing indicator component
 function TypingIndicator() {
@@ -78,8 +77,7 @@ function getLastMessageTime(profile) {
 function Inbox() {
   const [profiles, setProfiles] = useState([]);
   const [userProfile, setUserProfile] = useState(null);
-  const [aiThinking, setAiThinking] = useState(false);
-  const [suggestions, setSuggestions] = useState([
+  const [suggestions] = useState([
     'Ask about their weekend',
     'Send a compliment',
     'Share a funny meme',

@@ -14,9 +14,7 @@ import {
   ListItemText,
   ListItemIcon,
   Avatar,
-  LinearProgress,
-  IconButton,
-  Tooltip
+  LinearProgress
 } from '@mui/material';
 import {
   BarChart,
@@ -26,8 +24,6 @@ import {
   CartesianGrid,
   Tooltip as RechartsTooltip,
   ResponsiveContainer,
-  LineChart,
-  Line,
   PieChart,
   Pie,
   Cell,
@@ -52,9 +48,6 @@ import {
   LocalFireDepartment,
   TrendingFlat,
   PsychologyAlt,
-  FavoriteBorder,
-  MessageOutlined,
-  PersonAdd,
   Timeline,
   Insights,
   Analytics as AnalyticsIcon,
@@ -67,7 +60,6 @@ import axios from 'axios';
 
 const Analytics = () => {
   const [profiles, setProfiles] = useState([]);
-  const [analytics, setAnalytics] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -351,17 +343,7 @@ const Analytics = () => {
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8', '#82CA9D'];
 
-  const getSentimentIcon = (sentiment) => {
-    if (sentiment === 'positive') return <SentimentSatisfied color="success" />;
-    if (sentiment === 'negative') return <SentimentDissatisfied color="error" />;
-    return <SentimentNeutral color="action" />;
-  };
 
-  const getTrendIcon = (value, threshold = 0) => {
-    if (value > threshold) return <TrendingUp color="success" />;
-    if (value < threshold) return <TrendingDown color="error" />;
-    return <TrendingFlat color="action" />;
-  };
 
   if (loading) {
     return (
