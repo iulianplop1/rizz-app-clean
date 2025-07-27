@@ -1,0 +1,65 @@
+{
+  "1108293564331597": {
+    "user_id": "1108293564331597",
+    "username": "1108293564331597",
+    "name": "1108293564331597",
+    "tone_preference": "flirty",
+    "likes": [],
+    "personality_tags": [],
+    "inside_jokes": [],
+    "details": {},
+    "conversation_goals": [],
+    "previous_messages": [
+      {
+        "from": "1108293564331597",
+        "text": "",
+        "timestamp": "2025-07-18 12:53"
+      },
+      {
+        "from": "1108293564331597",
+        "text": "",
+        "timestamp": "2025-07-18 12:53"
+      }
+    ],
+    "memory_vector_ids": []
+  },
+  "517060774682889": {
+    "user_id": "517060774682889",
+    "username": "517060774682889",
+    "name": "517060774682889",
+    "tone_preference": "flirty",
+    "likes": [],
+    "personality_tags": [],
+    "inside_jokes": [],
+    "details": {},
+    "conversation_goals": [],
+    "previous_messages": [
+      {
+        "from": "Me",
+        "text": "",
+        "timestamp": "2025-07-18 14:36"
+      },
+      {
+        "from": "Me",
+        "text": "Uuf",
+        "timestamp": "2025-07-18 14:37"
+      },
+      {
+        "from": "517060774682889",
+        "text": "",
+        "timestamp": "2025-07-18 14:39"
+      },
+      {
+        "from": "517060774682889",
+        "text": "",
+        "timestamp": "2025-07-18 14:39"
+      },
+      {
+        "from": "517060774682889",
+        "text": "Hahahah",
+        "timestamp": "2025-07-18 14:39"
+      }
+    ],
+    "memory_vector_ids": []
+  }
+}

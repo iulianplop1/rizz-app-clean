@@ -1,0 +1,16 @@
+{
+  "name": "Iulian",
+  "gender": "male",
+  "age": 19,
+  "interests": [
+    "fitness",
+    "travel",
+    "music"
+  ],
+  "personality": [
+    "funny",
+    "confident",
+    "adventurous"
+  ],
+  "bio": "I'm a 19-year-old guy who loves fitness, travel, and good conversation."
+}
